@@ -1,0 +1,174 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Search container - Royal blue with rounded ends */
+.search-container {
+    display: flex;
+    background-color: #4169E1; /* Royal blue */
+    border-radius: 50px; /* Fully rounded ends */
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(65, 105, 225, 0.3);
+    transition: all 0.3s ease;
+    max-width: 500px;
+    width: 100%;
+}
+
+.search-container:hover {
+    box-shadow: 0 4px 12px rgba(65, 105, 225, 0.4);
+    transform: translateY(-1px);
+}
+
+.search-container:focus-within {
+    box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.2);
+}
+
+/* Search input */
+.search-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    border-radius: 50px 0 0 50px;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+}
+
+.search-input:focus::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Search button with rectangular icon style */
+.search-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 12px 16px;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    min-width: 50px;
+}
+
+.search-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.search-btn:active {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(0.98);
+}
+
+.search-btn svg {
+    color: white;
+    stroke-width: 2.5;
+    width: 20px;
+    height: 20px;
+}
+
+/* Main content */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.search-results {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    color: #666;
+}
+
+.search-results h3 {
+    color: #4169E1;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.product-list {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.product-item {
+    background: #f8f9ff;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    border-left: 3px solid #4169E1;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.product-item:hover {
+    background: #e8f0ff;
+    transform: translateX(5px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .search-container {
+        max-width: 100%;
+    }
+    
+    .search-input {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+    
+    .search-btn {
+        padding: 10px 14px;
+        min-width: 44px;
+    }
+    
+    .search-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+}
